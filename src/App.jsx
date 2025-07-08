@@ -1,11 +1,20 @@
 import './App.css'
+import Menu from './components/Menu';
+import About from './pages/About'
+import Home from './pages/Home'
+import { BrowserRouter, Route, Routes } from 'react-router';
 
 function App() {
 
   return (
-    <>
-      Hello world!
-    </>
+    <BrowserRouter>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path='*' element={<h1>404 Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
