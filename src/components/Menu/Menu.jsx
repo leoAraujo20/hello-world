@@ -1,11 +1,12 @@
 import styles from './Menu.module.css';
+import MenuLink from '../MenuLink';
 
 function Menu() {
   return (
     <header>
       <nav className={styles['nav-bar']}>
-        <a className={styles.link} href="/">Home</a>
-        <a className={styles.link} href="/about">Sobre mim</a>
+        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/about">Sobre mim</MenuLink>
       </nav>
     </header>
   )
