@@ -25,18 +25,18 @@
   height: 406px;
 }
 
-.images > .my-photo {
+.images > .photo {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 18vw;
+  width: 22vw;
   border-radius: 50%;
 }
 
 .images > .colorful-circle {
   position: absolute;
-  right: 7vw;
-  bottom: 2.2vw;
+  right: 0;
+  bottom: 0;
   width: 25vw;
 }
 

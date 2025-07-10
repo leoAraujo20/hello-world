@@ -14,8 +14,13 @@ function Banner() {
       <div className={styles.images}>
         <img
           className={styles["colorful-circle"]}
-          src="src/assets/images/nadia-eka.png"
-          alt="Um gato fantasiado de fantasma em cima de uma abóbora"
+          src="src/assets/images/circulo_colorido.png"
+          alt="Um círculo colorido"
+        />
+        <img
+          className={styles.photo}
+          src="src/assets/images/prayag-aghara.png"
+          alt="Uma foto"
         />
       </div>
     </div>
