@@ -13,7 +13,7 @@ function App() {
       <Menu />
       <Routes>
         <Route path='/' element={<DefaultPage />}>
-          <Route path='/' element={<Home />} />
+          <Route index element={<Home />} />
           <Route path='about' element={<About />} />
         </Route>
         <Route path='*' element={<h1>404 Not Found</h1>} />
