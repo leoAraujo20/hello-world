@@ -4,7 +4,6 @@ import Post from "../../components/Post";
 
 function Home() {
   return (
-    <main>
       <ul className={styles.posts}>
         {posts.map((post) => {
           return (
@@ -14,7 +13,6 @@ function Home() {
           )
         })}
       </ul>
-    </main>
   )
 }
 

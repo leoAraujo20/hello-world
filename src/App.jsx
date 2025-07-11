@@ -1,5 +1,5 @@
 import './App.css'
-import Banner from './components/Banner';
+import DefaultPage from './components/DefaultPage/';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 import About from './pages/About'
@@ -11,10 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Menu />
-      <Banner />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path='/' element={<DefaultPage />}>
+          <Route path='/' element={<Home />} />
+          <Route path='about' element={<About />} />
+        </Route>
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
       <Footer />
