@@ -1,6 +1,6 @@
 import styles from "./Home.module.css";
 import posts from "../../assets/json/posts.json";
-import PostCard from "../../components/CardPost";
+import PostCard from "../../components/PostCard";
 
 function Home() {
   return (

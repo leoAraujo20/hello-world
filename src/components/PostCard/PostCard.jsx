@@ -1,4 +1,4 @@
-import styles from "./Post.module.css";
+import styles from "./PostCard.module.css";
 
 function Post({ post }) {
   return (
