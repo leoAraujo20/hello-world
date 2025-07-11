@@ -1,5 +1,6 @@
 import './App.css'
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import Menu from './components/Menu';
 import About from './pages/About'
 import Home from './pages/Home'
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
