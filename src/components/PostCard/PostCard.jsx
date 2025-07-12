@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import styles from "./PostCard.module.css";
 
 function Post({ post }) {
@@ -5,7 +6,9 @@ function Post({ post }) {
     <div className={styles.post}>
       <img className={styles.cover} src={`/posts/${post.id}/capa.png`} alt="Imagem do post" />
       <h2 className={styles.title}>{post.title}</h2>
-      <button className={styles["read-button"]}>Ler mais</button>
+      <Link to={`/post/${post.id}`}>
+        <button className={styles["read-button"]}>Ler mais</button>
+      </Link>
     </div>
   );
 }

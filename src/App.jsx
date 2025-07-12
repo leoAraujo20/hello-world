@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Menu from './components/Menu';
 import About from './pages/About'
 import Home from './pages/Home'
+import Post from './pages/Post';
 import { BrowserRouter, Route, Routes } from 'react-router';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<DefaultPage />}>
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
+          <Route path='post/:id' element={<Post />} />
         </Route>
         <Route path='*' element={<h1>404 Not Found</h1>} />
       </Routes>
