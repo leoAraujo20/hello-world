@@ -1,6 +1,8 @@
+import styles from "./Post.module.css";
 import { useParams } from "react-router";
 import posts from "../../assets/json/posts.json"
 import PostModel from "../../components/PostModel/PostModel";
+import Markdown from 'react-markdown'
 
 function Post() {
   let { id } = useParams();
@@ -9,7 +11,12 @@ function Post() {
 
   return (
     <PostModel coverPhoto={`/posts/${post.id}/capa.png`} title={post.title}>
-      {post.text}
+      <div className={styles["post-markdown-container"]}>
+        <Markdown>
+          {post.text}
+        </Markdown>
+      </div>
+        
     </PostModel>
   )
 }
