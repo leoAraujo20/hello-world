@@ -9,6 +9,10 @@ function Post() {
 
   let post = posts.find((post) => post.id === Number(id));
 
+  if (!post) {
+    return <h1>Post não foi encontrado!</h1>;
+  }
+
   return (
     <PostModel coverPhoto={`/posts/${post.id}/capa.png`} title={post.title}>
       <div className={styles["post-markdown-container"]}>
@@ -16,7 +20,6 @@ function Post() {
           {post.text}
         </Markdown>
       </div>
-        
     </PostModel>
   )
 }
