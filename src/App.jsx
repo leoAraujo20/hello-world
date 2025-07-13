@@ -2,6 +2,7 @@ import './App.css'
 import DefaultPage from './components/DefaultPage/';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
+import NotFound from './components/NotFound';
 import About from './pages/About'
 import Home from './pages/Home'
 import Post from './pages/Post';
@@ -18,7 +19,7 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='post/:id' element={<Post />} />
         </Route>
-        <Route path='*' element={<h1>404 Not Found</h1>} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
