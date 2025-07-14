@@ -1,7 +1,11 @@
 import styles from "./NotFound.module.css";
 import dogImage from "../../assets/images/erro_404.png";
+import MainButton from "../MainButton";
+import { useNavigate } from "react-router";
 
 function NotFound() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={styles.contentContainer}>
@@ -17,7 +21,7 @@ function NotFound() {
           <img className={styles.dogImage} src={dogImage} alt="Imagem de um cachorro de óculos" />
         </div>
         <div className={styles.buttonContainer}>
-          <button>Voltar</button>
+          <MainButton onClick={() => navigate("/")}>Voltar</MainButton>
         </div>
       </div>
       <div className={styles.blankSpace}></div>
