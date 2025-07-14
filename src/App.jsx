@@ -6,7 +6,7 @@ import NotFound from './components/NotFound';
 import About from './pages/About'
 import Home from './pages/Home'
 import Post from './pages/Post';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes  } from 'react-router';
 
 function App() {
 
