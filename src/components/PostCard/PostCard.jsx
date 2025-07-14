@@ -11,7 +11,7 @@ function PostCard({ post }) {
         alt="Imagem do post"
       />
       <h2 className={styles.title}>{post.title}</h2>
-      <Link to={`/post/${post.id}`}>
+      <Link to={`/posts/${post.id}`}>
         <MainButton>Ler Mais</MainButton>
       </Link>
     </div>
