@@ -1,8 +1,10 @@
 import styles from "./Post.module.css";
-import { useParams } from "react-router";
-import posts from "../../assets/json/posts.json"
-import PostModel from "../../components/PostModel/PostModel";
-import Markdown from 'react-markdown'
+import { Route, Routes, useParams } from "react-router";
+import posts from "../../assets/json/posts.json";
+import PostModel from "../../components/PostModel/";
+import Markdown from "react-markdown";
+import NotFound from "../../components/NotFound";
+import DefaultPage from "../../components/DefaultPage";
 
 function Post() {
   let { id } = useParams();
@@ -10,18 +12,28 @@ function Post() {
   let post = posts.find((post) => post.id === Number(id));
 
   if (!post) {
-    return <h1>Post não foi encontrado!</h1>;
+    return <NotFound />;
   }
 
   return (
-    <PostModel coverPhoto={`/posts/${post.id}/capa.png`} title={post.title}>
-      <div className={styles["post-markdown-container"]}>
-        <Markdown>
-          {post.text}
-        </Markdown>
-      </div>
-    </PostModel>
-  )
+    <Routes>
+      <Route path="*" element={<DefaultPage />}>
+        <Route
+          index
+          element={
+            <PostModel
+              coverPhoto={`/posts/${post.id}/capa.png`}
+              title={post.title}
+            >
+              <div className={styles["post-markdown-container"]}>
+                <Markdown>{post.text}</Markdown>
+              </div>
+            </PostModel>
+          }
+        />
+      </Route>
+    </Routes>
+  );
 }
 
 export default Post;
