@@ -3,6 +3,7 @@ import DefaultPage from './components/DefaultPage/';
 import Footer from './components/Footer';
 import Menu from './components/Menu';
 import NotFound from './components/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 import About from './pages/About'
 import Home from './pages/Home'
 import Post from './pages/Post';
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Menu />
       <Routes>
         <Route path='/' element={<DefaultPage />}>
